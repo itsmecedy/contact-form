@@ -9,7 +9,7 @@ export default function Form() {
   };
 
   return (
-    <div className=" border border-red-400 flex justify-center items-center h-screen">
+    <div className=" border border-red-400 flex justify-center items-center h-full sm:h-screen">
       <form
         action=""
         className=" sm:p-10 p-4 m-4 lg:w-3/6 bg-[var(--white)] rounded-2xl"
