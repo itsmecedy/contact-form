@@ -10,12 +10,15 @@ export default function Form() {
 
   return (
     <div className=" border border-red-400 flex justify-center items-center h-screen">
-      <form action="" className=" p-10 w-2/5 bg-[var(--white)] rounded-2xl">
+      <form
+        action=""
+        className=" sm:p-10 p-4 m-4 lg:w-3/6 bg-[var(--white)] rounded-2xl"
+      >
         <p className=" text-4xl font-bold mb-10">Contact Us</p>
 
         {/* Name */}
-        <div className=" flex space-x-2">
-          <div className=" flex flex-1 flex-col">
+        <div className="flex flex-col space-x-0 xl:flex-row xl:space-x-2">
+          <div className=" flex flex-1 flex-col ">
             <label htmlFor="firstName">
               First Name<span className="pl-2 text-[var(--green-600)]">*</span>
             </label>
@@ -62,10 +65,10 @@ export default function Form() {
           </label>
 
           {/* Query options */}
-          <div className="flex space-x-2">
+          <div className="lg:flex lg:space-x-2">
             {/* General Inquiry Option */}
             <div
-              className={`flex items-center flex-1 border h-10 text-xl my-2 px-4 py-2 rounded transition-colors ${
+              className={`flex items-center flex-1 border h-12 text-xl my-2 px-4 py-2 rounded transition-colors ${
                 selectedQueryType === "generalInquiry"
                   ? "bg-[var(--green-200)] border-[var(--green-600)]"
                   : "border-gray-500"
@@ -88,7 +91,7 @@ export default function Form() {
 
             {/* Support Request Option */}
             <div
-              className={`flex items-center flex-1 border h-10 text-xl my-2 px-4 py-2 rounded transition-colors ${
+              className={`flex items-center flex-1 border h-12 text-xl my-2 px-4 py-2 rounded transition-colors ${
                 selectedQueryType === "supportRequest"
                   ? "bg-[var(--green-200)] border-[var(--green-600)]"
                   : "border-gray-500"
@@ -143,7 +146,7 @@ export default function Form() {
         {/* submit */}
         <button
           type="submit"
-          className="w-full bg-[var(--green-600)] text-[var(--white)] py-2 px-4 rounded"
+          className="w-full bg-[var(--green-600)] hover:bg-green-900 text-[var(--white)] py-2 px-4 rounded"
         >
           Submit
         </button>
