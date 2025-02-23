@@ -2,31 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Regular Karla */
 @font-face {
   font-family: "Karla";
   src: url("/assets/fonts/static/Karla-Regular.ttf") format("truetype");
   font-weight: 100 200 300 400 500 600 700;
-
   font-style: normal;
 }
 
-/* Italic Karla */
 @font-face {
   font-family: "Karla";
-  src: url("/assets/fonts/Karla-Italic-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("/assets/fonts/Karla-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: 100 200 300 400 500 600 700;
   font-style: italic;
 }
 
 :root {
-  /* Primary Colors */
   --green-200: hsl(148, 38%, 91%);
   --green-600: hsl(169, 82%, 27%);
   --red: hsl(0, 66%, 54%);
-
-  /* Neutral Colors */
   --white: hsl(0, 0%, 100%);
   --grey-500: hsl(186, 15%, 59%);
   --grey-900: hsl(187, 24%, 22%);
@@ -43,36 +36,32 @@ body {
   font-size: 20px;
 }
 
-/* Hide default radio button */
 .hidden-radio {
-  -webkit-appearance: none; /* Remove default styling in WebKit browsers */
-  -moz-appearance: none; /* Remove default styling in Firefox */
-  appearance: none; /* Remove default styling in other browsers */
-  width: 20px; /* Size of the outer circle */
-  height: 20px; /* Size of the outer circle */
-  border-radius: 50%; /* Make it round */
-  border: 2px solid var(--grey-500); /* Outer circle border */
-  background-color: white; /* Outer circle background */
-  position: relative; /* Needed for the inner dot positioning */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--grey-500);
+  background-color: white;
+  position: relative;
   transition: all 0.3s ease;
 }
 
-/* When checked, color the outer circle and show the inner dot */
 input[type="radio"]:checked {
-  border-color: var(--green-600); /* Outer circle color when checked */
+  border-color: var(--green-600);
 }
 
 input[type="radio"]:checked::after {
   content: "";
   display: block;
-  width: 12px; /* Size of the inner dot */
-  height: 12px; /* Size of the inner dot */
-  border-radius: 50%; /* Round inner dot */
-  background-color: var(--green-600); /* Inner dot color */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--green-600);
   position: absolute;
-  top: 50%; /* Center the dot vertically */
-  left: 50%; /* Center the dot horizontally */
-  transform: translate(-50%, -50%); /* Ensure it's perfectly centered */
- 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-

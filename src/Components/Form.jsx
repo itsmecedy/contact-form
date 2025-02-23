@@ -9,10 +9,10 @@ export default function Form() {
   };
 
   return (
-    <div className=" border border-red-400 flex justify-center items-center h-full sm:h-screen">
+    <div className=" flex justify-center items-center h-full sm:h-screen">
       <form
         action=""
-        className=" sm:p-10 p-4 m-4 lg:w-3/6 bg-[var(--white)] rounded-2xl"
+        className=" sm:p-10 p-4 m-4 lg:w-3/5 bg-[var(--white)] rounded-2xl"
       >
         <p className=" text-4xl font-bold mb-10">Contact Us</p>
 
@@ -124,7 +124,7 @@ export default function Form() {
             name="message"
             rows="5"
             placeholder="Enter your message here..."
-            className="h-40 my-2 px-4 py-4  border border-[var(--grey-500)] focus:outline-[var(--green-600)] rounded capitalize"
+            className="h-40 my-2 px-4 py-4  border border-[var(--grey-500)] focus:outline-[var(--green-600)] rounded"
             required
           ></textarea>
         </div>
